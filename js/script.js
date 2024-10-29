@@ -28,7 +28,6 @@
 const d = new Date();
 
 let hour = d.getHours();
-hour = 2
 // console.log(hour);
 
 let greetingText = document.getElementById("greeting-text");
@@ -45,6 +44,7 @@ if (hour < 12) {
   greetingText.parentElement.classList.add("noon-gradient");
   document.querySelector(".morning").classList.add("d-none");
   document.querySelector(".night").classList.add("d-none");
+  document.getElementsByTagName("bird")
 } // hour is greater than 17:00
 else {
   greetingText.textContent = "Good Night!";
