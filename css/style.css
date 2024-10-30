@@ -242,14 +242,102 @@ body {
   animation-timing-function: linear;
 }
 
-@keyframes bird2 {
+
+/* night */
+
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+.stars, .twinkling {
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+width:100%;
+height:100%;
+display:block;
+}
+.stars {
+background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+z-index:0;
+}
+.twinkling{
+background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+z-index:1;
+-moz-animation:move-twink-back 200s linear infinite;
+-ms-animation:move-twink-back 200s linear infinite;
+-o-animation:move-twink-back 200s linear infinite;
+-webkit-animation:move-twink-back 200s linear infinite;
+animation:move-twink-back 200s linear infinite;
+}
+/* MOON */
+.moon {
+  border-radius: 50%;
+  background-image: -moz-radial-gradient( 50% 50%, circle closest-side, rgb(208,219,230) 0%, rgb(223,226,233) 50%, rgb(228,232,239) 100%);
+  background-image: -webkit-radial-gradient( 50% 50%, circle closest-side, rgb(208,219,230) 0%, rgb(223,226,233) 50%, rgb(228,232,239) 100%);
+  background-image: -ms-radial-gradient( 50% 50%, circle closest-side, rgb(208,219,230) 0%, rgb(223,226,233) 50%, rgb(228,232,239) 100%);
+  height: 35vw;
+  width: 35vw;
+  position: absolute;
+  top: -15vw;
+  right: -10vw;
+  z-index: 3;
+}
+.moon::after { /* GLOW AROUND MOON */
+  border-radius: 50%;
+  height: 35vw;
+  width: 35vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-box-shadow:0px 0px 25px 0px rgba(208,219,230,0.85);
+  -moz-box-shadow: 0px 0px 25px 0px rgba(208,219,230,0.85);
+  box-shadow: 0px 0px 25px 0px rgba(208,219,230,0.85);
+  mix-blend-mode: lighten;
+  content: "";
+}
+
+.night-gradient #greeting-text {
+  background: linear-gradient(0deg, rgba(40,57,139,1) 0%, rgba(10,91,239,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#cloud5
+{
+  animation: 45s infinite floatingCloud5;
+  animation-timing-function: linear;
+}
+
+@keyframes floatingCloud5 {
   from {
-    top: 35%;
-    left: 0%;
+    top: 17%;
+    left: 100%;
   }
 
   to {
-    top: 35%;
-    left: 100%;
+    top: 17%;
+    left: 0%;
   }
+}
+
+.night-gradient #greeting-text {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(117, 117, 117, 0.85) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 8vw;
 }
