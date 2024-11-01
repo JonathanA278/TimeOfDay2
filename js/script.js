@@ -29,7 +29,7 @@ const d = new Date();
 
 let hour = d.getHours();
 // console.log(hour);
-hour = 20
+hour = 13
 let greetingText = document.getElementById("greeting-text");
 
 if (hour < 12) {
