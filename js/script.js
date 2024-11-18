@@ -30,6 +30,12 @@ const d = new Date();
 let hour = d.getHours();
 // console.log(hour);
 hour = 13
+
+let morningBtn = document.getElementsByClassName('btn')[0];
+let afternoonBtn = document.getElementsByClassName('btn')[1];
+let nightBtn = document.getElementsByClassName('btn')[2];
+console.log(morningBtn,afternoonBtn,nightBtn);
+
 let greetingText = document.getElementById("greeting-text");
 
 if (hour < 12) {
